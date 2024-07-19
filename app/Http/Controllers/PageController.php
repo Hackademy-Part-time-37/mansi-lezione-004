@@ -10,7 +10,10 @@ class PageController extends Controller
     {
         return view('homepage');
     }
-
+    public function contact()
+    {
+        return view('contact');
+    }
     public function blog()
     {
         $articles = ['ciao', 'sono', 'francesco', 'ultimo'];
@@ -18,8 +21,13 @@ class PageController extends Controller
         return view('blog', compact('articles'));
     }
 
-    public function detail()
+    public function detail($article)
     {
-        return view('detail');
+        return view('detail', compact('article'));
+    }
+
+    public function send(Request $request)
+    {
+        dd($request->all(), $request->fullname);
     }
 }

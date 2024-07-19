@@ -20,3 +20,7 @@ html {
     background-repeat: no-repeat;
     min-height: 15rem;
 }
+
+.container-sm {
+    width: 50% !important;
+}
