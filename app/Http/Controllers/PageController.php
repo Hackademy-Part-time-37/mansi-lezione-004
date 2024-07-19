@@ -23,6 +23,7 @@ class PageController extends Controller
 
     public function detail($article)
     {
+
         return view('detail', compact('article'));
     }
 

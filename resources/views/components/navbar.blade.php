@@ -9,6 +9,7 @@
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                 <li class="nav-item"><a class="nav-link" href="{{ route('homepage') }}">Home</a></li>
                 <li class="nav-item"><a class="nav-link" href="{{ route('blog') }}">Blog</a></li>
+                <li class="nav-item"><a class="nav-link" href="{{ route('contact') }}">Contattami</a></li>
 
             </ul>
         </div>
