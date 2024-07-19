@@ -10,17 +10,21 @@
                 <form action="{{ route('send') }}" method="POST">
                     @csrf
                     <div class="form-floating mb-3">
-                        <input class="form-control" name="fullname" type="text" placeholder="Enter your name..."
-                            value="{{ old('fullname') }}">
+                        <input class="form-control" name="fullname" required type="text"
+                            placeholder="Enter your name..." value="{{ old('fullname') }}">
                         <label for="fullname">Full name</label>
-
+                        @error('fullname')
+                            {{ $message }}
+                        @enderror
                     </div>
                     <!-- Email address input-->
                     <div class="form-floating mb-3">
                         <input class="form-control" value="{{ old('email') }}" name="email" type="email"
                             placeholder="name@example.com">
                         <label for="email">Email address</label>
-
+                        @error('email')
+                            {{ $message }}
+                        @enderror
                     </div>
 
                     <!-- Message input-->
@@ -28,6 +32,9 @@
                         <textarea class="form-control" name="message" type="text" placeholder="Enter your message here..."
                             style="height: 10rem">ciccio</textarea>
                         <label for="message">Message</label>
+                        @error('message')
+                            {{ $message }}
+                        @enderror
                     </div>
 
 

@@ -9,4 +9,5 @@ Route::get('/dettaglio-articolo/{article}', [PageController::class, 'detail'])->
 
 //-----
 Route::get('/contatti', [PageController::class, 'contact'])->name('contact');
+
 Route::post('/invio-form-contatti', [PageController::class, 'send'])->name('send');
